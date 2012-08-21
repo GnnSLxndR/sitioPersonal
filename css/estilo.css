@@ -1,0 +1,90 @@
+ @font-face {
+ 	font-family:GeostarFill;
+ 	src: url('fonts/GeostarFill-Regular.ttf' );
+ }
+ @font-face {
+ 	font-family: Sansation_Light;
+ 	src: url('fonts/Sansation_Light.ttf');
+ }
+ body{
+ 	font-family: Sansation_Light;
+ 	background-color: white;
+ 	color: #222;
+ 	margin: 0;
+ }
+header{
+	width: 100%;
+	height: 90px;
+	position: relative;
+	top:0;
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+header.after{
+	position: fixed;
+	background-color: rgba(255,255,255,0.2);
+}
+#header_container{
+	margin: 0 auto;
+	width: 75%;
+	height: auto;
+}
+ .logo{
+ 	font-family: GeostarFill;
+ 	font-size: 10pt;
+ 	width:30%;
+ 	
+ }
+
+.logo img{
+	width: 20%;
+	height: 100%;
+}
+.logo h1 , .logo img{
+	display: inline-block;
+	vertical-align: top;
+}
+.logo h1{
+	margin-top: 30px;
+}
+ .logo, .menu{
+ 	position: relative;
+ 	display: inline-block;
+ 	vertical-align: top;
+ }
+
+ nav.menu{
+ 	width: 50%;
+ 	height: 100%;
+ }
+ nav.menu ul{
+ 	list-style: none;
+ 	margin-top: 25px;
+ 	width: 100%;
+ }
+ nav.menu ul li{
+ 	display: inline-block;
+ 	margin-left: 10px;
+ 	font-size: 14pt;
+ 	padding: 8px 5px 8px 5px;
+ }
+ nav.menu ul li a{
+ 	color: #222;
+ 	text-decoration: none;
+ }
+ nav.menu ul li:hover{
+ 	background-color: #222;
+ }
+ nav.menu ul li:hover a{
+ 	color: white;
+ }
+ article{
+ 	width: 500px;
+ 	height: 400px;
+ 	background-color: red;
+ 	margin: 10px;
+ 	display: inline-block;
+ }
