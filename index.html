@@ -5,9 +5,13 @@
 	<title>GnnSLxndR CrrsqlL StrmR</title>
 	<!--<link rel="stylesheet" href="css/reset.css">-->
 	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="css/doraemon.css">
+	<link rel='shortcut icon' href='img/logo.png'>
+	
 </head>
 <body>
-	<header >
+	<header>
 		<div id="header_container">
 			<div class="logo">
 				<img src="img/logo.png" alt="logo">
@@ -15,14 +19,153 @@
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="#">Elemento 1</a></li>
-					<li><a href="#">Elemento 2</a></li>
-					<li><a href="#">Elemento 3</a></li>
-					<li><a href="#">Elemento 4</a></li>
+					<li><a href="#wrapper">Inicio</a></li>
+					<li><a href="#prueba">LoQueSe</a></li>
+					<li><a href="#perfil">Sobre Mi</a></li>
+					<li><a href="#">Portafolio</a></li>
+					<li><a href="#">Contacto</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
+	<section id="wrapper">
+		<div class="ribbon-left">
+				<div class="ribbon-edge-bottomleft"></div>
+			</div>		
+			<div class="ribbon-rigth">
+				<div class="ribbon-edge-bottomright"></div>
+			</div>
+		<!--<div class="nav">
+			<span id="left"></span>
+			<span id="right"></span>
+		</div>-->
+		<div class="slider">		
+			<ul>
+				<li><img src="img/html5-css3.jpg" title="Html5 y Css3" alt="Experto maquetando arhivos psd, jpg y png"></li>
+				<li><img src="img/django_pony.jpeg" title="Django" alt="El framework de Python para perfeccionistas"></li>
+				<li><img src="img/nodejs.png" title="NodeJs" alt="Es un framework orientado a eventos e I/O para el motor Javascript V8 de Google"></li>
+				
+			</ul>		
+		</div>		
+	</section>
+	<div id="centrar">
+		<span>Demo del slider <div id="flecha"></div></span>
+		<a href="https://github.com/GnnSLxndR/Slider-Imagenes" target="_new"><img src="img/github1.png" alt="logo_github"></a>
+	</div>
+	<section id="prueba">
+		<section id="skill">
+			<h1 class="format">Lo que Se:</h1>
+			<div id="technology">
+				<div id="html"></div>
+				<div id="css"></div>
+				<div id="jquery"></div>
+				<div id="python"></div>
+				<div id="django"></div>
+				<div id="php"></div>
+				<div id="symfony"></div>
+				<div id="node"></div>
+			</div>
+		</section>
+	</section>
+	<section id="perfil">
+		<h1 class="format" style="color:#222;">Mi Perfil:</h1>
+		<div id="sobreMi">
+			<img src="img/logo.png" alt="yo">
+			<p style="text-align:justify">Hola,Mi Nombre es <b>Gennys ALexander Carrasquilla Estremor</b>,soy de Cartagena/Colombia, Ingeniero de Sistemas de la Universidad de cartagena me dedico al desarrollo rápido de aplicaciones web o escritorio.<br>
+			Mis especialidades: <b>HMTL5</b>, <b>CSS3</b>, <b>JavaScript/Jquery</b>, <b>PHP</b> y <b>Python/Django</b>.</p>
+			<p style="text-align:justify; margin-left:0;">Soy un aficionado a los juegos de videos uno de mis favoritos son: Halo2, StarCraft, Call of Duty y Tetris, pero tengo varios meses que no Juego nada <b>&rarr;</b></p>
+			<div id="doraemon">
+				<div id="face">
+				    <div id="eyes">
+				        <div id="lefteye" class="eye eye_left"></div>
+				        <div id="leftblackeye" class="black_eye black_left"></div>
 
+				        <div id="righteye" class="eye eye_right"></div>
+				        <div id="rightblackeye" class="black_eye black_right"></div>
+				    </div>
+				    <div id="base">
+				        <div id="base_white"></div>
+				        <div id="nose">
+				            <div id="nose_light"></div>
+				        </div>
+				        <div id="nose_line"></div>
+				        <div id="mouth"></div>
+				        <div id="mouth_rewrite"></div>
+				        <div id="firefox_mouth"></div>
+
+				        <div class="whiskers whi_right_top rotate160"></div>
+				        <div class="whiskers whi_right"></div>
+				        <div class="whiskers whi_right_bottom rotate20"></div>
+
+				        <div class="whiskers whi_left_top rotate20"></div>
+				        <div class="whiskers whi_left"></div>
+				        <div class="whiskers whi_left_bottom rotate160"></div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<p>todo los derechos reservados 2012(c)</p>
+	</footer>
 </body>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>-->
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/slider.jquery.js"></script>
+<script type="text/javascript">
+	$(document).on('ready', function(){
+		$('.slider').slider({
+							animate: 'easeInOutSine',
+							duration:1000,
+							anterior:'.ribbon-left',
+							siguiente:'.ribbon-rigth',
+						});
+
+	});
+
+	$(function(){
+       $('.menu ul li a').on('click',function(e){
+		e.preventDefault();
+        var href=$(this).attr('href');
+		$('body,html').stop(true,true).animate({
+           scrollTop: $(href).offset().top-70
+        	},1000,'easeOutQuart');
+	    });
+	});
+
+	$(function(){
+				var top = $('header').offset().top;
+				var valorRestaurar = $('#wrapper').css('margin-top');
+				var navegacion = function(){
+					var windowscroll = $(window).scrollTop();
+
+					if(windowscroll > top ){
+						$('header').addClass('after');
+						$('header div.logo img').css({'width':'15%',
+													'height':'60px'});
+						$('header div.logo h1').css('margin-top','20px');
+						$('nav.menu ul').css('margin-top','15px');
+						//$('#wrapper').css('margin-top','30px');
+					}else{
+						//$('#wrapper').css('margin-top', valorRestaurar);
+						$('header').removeClass('after');
+						$('header div.logo img').css({'width':'20%',
+													'height':'80px'});
+						$('header div.logo h1').css('margin-top','30px');
+						$('nav.menu ul').css('margin-top','25px');
+						
+					}
+				};
+
+				navegacion();
+
+				$(window).scroll(function(){
+					navegacion();
+				});
+
+	});
+
+</script>
 </html>

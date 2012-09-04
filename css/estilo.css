@@ -1,83 +1,267 @@
- @font-face {
- 	font-family:GeostarFill;
- 	src: url('fonts/GeostarFill-Regular.ttf' );
- }
- @font-face {
- 	font-family: Sansation_Light;
- 	src: url('fonts/Sansation_Light.ttf');
- }
- body{
- 	font-family: Sansation_Light;
- 	background-color: white;
- 	color: #222;
- 	margin: 0;
- }
+::selection{
+	background: #F27A28;
+}
+@font-face {
+	font-family:GeostarFill;
+	src: url('fonts/GeostarFill-Regular.ttf' );
+}
+@font-face {
+	font-family: Sansation_Light;
+	src: url('fonts/Sansation_Light.ttf');
+}
+@font-face {
+	font-family: Lato;
+	src: url('fonts/Lato-Bold.ttf');
+}
+body{
+	font-family: Sansation_Light;
+	background-image: url('../img/bg_body.png');
+	color: #222;
+	margin: 0;
+	height: 1000px;
+}
 header{
+	background-color: rgba(255,255,255,0.6);
 	width: 100%;
 	height: 90px;
-	position: relative;
+	position: fixed;
 	top:0;
 	left: 0;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	z-index: 99;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 header.after{
 	position: fixed;
-	background-color: rgba(255,255,255,0.2);
+	height: 64px;
+	background-color: rgba(255,255,255,0.8);
+	border-bottom: 2px solid rgba(0,0,0,0.6);
 }
 #header_container{
 	margin: 0 auto;
-	width: 75%;
+	width: 80%;
 	height: auto;
 }
- .logo{
- 	font-family: GeostarFill;
- 	font-size: 10pt;
- 	width:30%;
- 	
- }
+.logo{
+	font-family: GeostarFill;
+	font-size: 10pt;
+	width:40%;
+	
+}
 
 .logo img{
 	width: 20%;
-	height: 100%;
+	height: 80px;
 }
 .logo h1 , .logo img{
 	display: inline-block;
 	vertical-align: top;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 .logo h1{
 	margin-top: 30px;
 }
- .logo, .menu{
- 	position: relative;
- 	display: inline-block;
- 	vertical-align: top;
- }
+.logo, .menu{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
 
- nav.menu{
- 	width: 50%;
- 	height: 100%;
- }
- nav.menu ul{
- 	list-style: none;
- 	margin-top: 25px;
- 	width: 100%;
- }
- nav.menu ul li{
- 	display: inline-block;
- 	margin-left: 10px;
- 	font-size: 14pt;
- 	padding: 8px 5px 8px 5px;
- }
- nav.menu ul li a{
- 	color: #222;
- 	text-decoration: none;
- }
- nav.menu ul li:hover{
- 	background-color: #222;
- }
- nav.menu ul li:hover a{
- 	color: white;
- }
+nav.menu{
+	width: 55%;
+	height: 100%;
+	float:right;
+}
+nav.menu ul{
+	list-style: none;
+	margin-top: 25px;
+	width: 100%;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+nav.menu ul li{
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 14pt;
+	padding: 8px 5px 8px 5px;
+}
+nav.menu ul li a{
+	color: #222;
+	text-decoration: none;
+}
+nav.menu ul li:hover{
+	background-color: #222;
+}
+nav.menu ul li:hover a{
+	color: white;
+}
+div#centrar{
+	margin: 20px auto;
+	width: 80%;
+	text-align: center;
+}
+div#centrar span{
+	margin-top: 10px;
+	position: relative;
+	text-shadow:0px 1px 1px rgba(255, 255, 255, 0.5),
+	 			0px 2px 1px rgba(255, 255, 255, 0.5),
+	 			0px 3px 1px rgba(255, 255, 255, 0.5);
+	background: #F27A28;
+	padding: 5px;
+	width: 150px;
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 10pt;
+}
+#flecha{
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #F27A28;
+	right: -15px;
+	top: -7px;
+}
+div#centrar a{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+}
+div#centrar a img{	
+	width: 50px;
+	height: 50px;
+}
+section#prueba{
+	background-image: url('../img/txture.png');
+	background-repeat: repeat;
+	box-shadow: 0px 0px 10px black;
+}
+section#skill, section#perfil{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 15px;
+	text-align: center;
+}
+.format{
+	font-family: Lato;
+	margin-top: 5px;
+	/*background: white;*/
+	color: white;
+	font-size: 20pt;
+	width: auto;
+	text-shadow: 0px 1px 1px #222;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-ms-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+.format:hover{
+	text-shadow: 0px 0px 10px #F27A28;
+	font-size: 24pt;
+}
+#technology, #sobreMi{
+	display: inline-block;
+	vertical-align: top;
+}
+div#technology, div#sobreMi{
+	width: 75%;
+	margin-bottom: 20px;
+}
+
+div#sobreMi{
+	margin-top: -22px;
+}
+div#sobreMi img{
+	border-radius: 50%;
+	border: 2px solid #222;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	box-shadow: 0px 1px 2px #222;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-ms-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+div#sobreMi img:hover{
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+div#sobreMi p{
+	font-size: 14pt;
+	display: inline-block;
+	width: 80%;
+	vertical-align: top;
+	margin-left: 10px;
+}
+div#technology div{
+	background-color: white;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+	margin: 5px;
+	height:102px;
+	width: 142px;
+	display: inline-block;
+	vertical-align: center;
+}
+div#technology div:hover{
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.9);
+}
+div#technology #html{
+	background-image: url('../img/technology1.png');
+	background-position: -145px -10px; 	
+}
+div#technology #css{
+	background-image: url('../img/technology1.png');
+	background-position: -149px 110px; 	
+}
+div#technology #jquery{
+	background-image: url('../img/technology1.png');
+	background-position: -7px 105px; 	
+}
+div#technology #python{
+	background-image: url('../img/technology1.png');
+	background-position: 140px -10px; 	
+}
+div#technology #django{
+	background-image: url('../img/technology1.png');
+	background-position: 292px 110px; 	
+}
+div#technology #php{
+	background-image: url('../img/technology1.png');
+	background-position: -7px -10px; 	
+}
+div#technology #symfony{
+	background-image: url('../img/technology1.png');
+	background-position: 137px 110px; 	
+}
+div#technology #node{
+	background-image: url('../img/technology1.png');
+	background-position: 290px -10px; 	
+}
+
+b{
+	color: #F27A28;
+	text-shadow: 1px 1px 2px #222;
+}
+footer{
+color: white;
+background-color: #222;
+height: 130px;
+width: 100%;
+position:relative;
+bottom: 0px;
+}
